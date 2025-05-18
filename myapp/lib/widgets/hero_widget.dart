@@ -30,14 +30,19 @@ class HeroWidget extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Hero(
-            tag: 'Flutter Mapp',
-            child: ClipRRect(
-              //for rounded borders, use cliperrect
-              borderRadius: BorderRadius.circular(20.0),
-              child: Image.asset(
-                "assets/images/bg.jpg",
-                color: Colors.teal,
-                colorBlendMode: BlendMode.modulate,
+            tag: 'hero1',
+            child: AspectRatio(
+              aspectRatio: 1920 / 1080,
+
+              child: ClipRRect(
+                //for rounded borders, use cliperrect
+                borderRadius: BorderRadius.circular(20.0),
+                child: Image.asset(
+                  "assets/images/bg.jpg",
+                  fit: BoxFit.cover,
+                  color: Colors.teal,
+                  colorBlendMode: BlendMode.modulate,
+                ),
               ),
             ),
           ),

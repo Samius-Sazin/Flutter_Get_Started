@@ -18,7 +18,10 @@ class WelcomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
 
               children: [
-                Lottie.asset('assets/lotties/lottie_welcome.json', height: 300.0),
+                Lottie.asset(
+                  'assets/lotties/lottie_welcome.json',
+                  height: 300.0,
+                ),
 
                 SizedBox(height: 20.0),
 
@@ -44,7 +47,9 @@ class WelcomePage extends StatelessWidget {
                       ),
                     );
                   },
-                  style: FilledButton.styleFrom(minimumSize: Size(double.infinity, 40.0)),
+                  style: FilledButton.styleFrom(
+                    minimumSize: Size(double.infinity, 40.0),
+                  ),
                   child: Text("Get Started"),
                 ),
 
@@ -59,7 +64,9 @@ class WelcomePage extends StatelessWidget {
                       ),
                     );
                   },
-                  style: TextButton.styleFrom(minimumSize: Size(double.infinity, 40.0)),
+                  style: TextButton.styleFrom(
+                    minimumSize: Size(double.infinity, 40.0),
+                  ),
                   child: Text("Login"),
                 ),
               ],

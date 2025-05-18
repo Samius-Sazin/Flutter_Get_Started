@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/views/pages/expanded_flexible_page.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key, required this.title});
@@ -38,7 +39,24 @@ class _SettingsPageState extends State<SettingsPage> {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
-              // snackbar
+              // Flexible and expanded  page
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return ExpandedFlexiblePage();
+                      },
+                    ),
+                  );
+                },
+                child: Text("Show Flexible & Explanded Page"),
+              ),
+
+              Divider(color: Colors.teal),
+
+              // snackbar, bottom notification bar
               ElevatedButton(
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
@@ -54,6 +72,7 @@ class _SettingsPageState extends State<SettingsPage> {
 
               Divider(color: Colors.teal),
 
+              //Dialog
               ElevatedButton(
                 onPressed: () {
                   showDialog(
@@ -79,7 +98,9 @@ class _SettingsPageState extends State<SettingsPage> {
 
               // textfield
               TextField(
-                decoration: InputDecoration(border: OutlineInputBorder()),
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                ),
                 // controller: controller, // have the text of the field
                 onChanged: (String? value) {
                   setState(() {
@@ -193,7 +214,10 @@ class _SettingsPageState extends State<SettingsPage> {
                 child: Column(
                   children: [
                     // Button, way-1, default,
-                    ElevatedButton(onPressed: () {}, child: Text("Click me")),
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text("Click me"),
+                    ),
 
                     // Button, way-2
                     ElevatedButton(
@@ -206,16 +230,28 @@ class _SettingsPageState extends State<SettingsPage> {
                     ),
 
                     // Button, way 3
-                    ElevatedButton(onPressed: () {}, child: Text("Click me")),
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text("Click me"),
+                    ),
 
                     // Button, way 4
-                    FilledButton(onPressed: () {}, child: Text("Click me")),
+                    FilledButton(
+                      onPressed: () {},
+                      child: Text("Click me"),
+                    ),
 
                     // Button, way 5
-                    TextButton(onPressed: () {}, child: Text("Click me")),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text("Click me"),
+                    ),
 
                     // Button, way 6
-                    OutlinedButton(onPressed: () {}, child: Text("Click me")),
+                    OutlinedButton(
+                      onPressed: () {},
+                      child: Text("Click me"),
+                    ),
 
                     // Button, way 7
                     CloseButton(onPressed: () {}),

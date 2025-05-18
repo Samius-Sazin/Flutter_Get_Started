@@ -9,6 +9,7 @@ class OnboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
@@ -17,12 +18,19 @@ class OnboardPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
 
               children: [
-                Lottie.asset('assets/lotties/lottie_hi.json', height: 200.0),
+                Lottie.asset(
+                  'assets/lotties/lottie_hi.json',
+                  height: 200.0,
+                ),
 
                 FittedBox(
                   child: Text(
                     "Flutter Mapp is the way to learn Flutter!",
-                    style: TextStyle(fontSize: 18.0, letterSpacing: 4.0, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      letterSpacing: 4.0,
+                      fontWeight: FontWeight.bold,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -39,7 +47,9 @@ class OnboardPage extends StatelessWidget {
                       ),
                     );
                   },
-                  style: FilledButton.styleFrom(minimumSize: Size(double.infinity, 40.0)),
+                  style: FilledButton.styleFrom(
+                    minimumSize: Size(double.infinity, 40.0),
+                  ),
                   child: Text("Next"),
                 ),
               ],

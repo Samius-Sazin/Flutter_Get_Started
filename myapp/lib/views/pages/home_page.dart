@@ -21,10 +21,14 @@ class HomePage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: 10.0),
+
             HeroWidget(
               title: "Flutter Mapp",
               nextPage: CoursePage(),
             ),
+
+            SizedBox(height: 5.0),
 
             // as list.generate creates a list of same items
             // so it need to inside of something that support list,
